@@ -1,0 +1,10 @@
+Here you will find 5 different directories that correspond to brain regions. Your job is to choose the region that interests you the most and analyze it in Seurat.
+
+Each directory contains a brief description of the data and the paper that used that dataset.
+
+Brain regions of interest for exercises
+• Hypothalamus: counts (Zhang et al., 2021)
+• Spinal cord: counts (Delile et al., 2019)
+• Hippocampus: TPMs (Habib et al., 2016)
+• Cortex: TPMs and counts, also in the Allen (Tasic et al., 2016)
+• LGN: counts (Bakken et al., 2021)
