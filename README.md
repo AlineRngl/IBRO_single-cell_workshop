@@ -27,7 +27,7 @@ You can also install them using the R package [here](https://github.com/AlineRng
 * Use of scRNA-seq data in the retina and workflow in other types of data sets
 * New technologies
 * Introduction to R
-* Introduction to Seurat
+* [Introduction to Seurat](https://html-preview.github.io/?url=https://github.com/AlineRngl/IBRO_single-cell_workshop/blob/main/Seurat/IntroToSeurat/RGC_singleCell_Analysis.html)
 * Hands-on exercises
 
   # References
