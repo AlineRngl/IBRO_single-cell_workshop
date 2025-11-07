@@ -17,7 +17,7 @@ In R, install the following libraries (in case they are not already installed):
 * scales
 * dplyr
 
-You can also install them using the R package here, but the library devtools needs to be installed first.
+You can also install them using the R package [here](https://github.com/AlineRngl/IBRO_single-cell_workshop/tree/main/Seurat/IntroToSeurat/InstallRLibrariesPackage), but the library devtools needs to be installed first.
 
 # Outline
 * scRNA-seq technology
