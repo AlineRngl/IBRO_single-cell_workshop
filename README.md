@@ -20,15 +20,16 @@ In R, install the following libraries (in case they are not already installed):
 You can also install them using the R package [here](https://github.com/AlineRngl/IBRO_single-cell_workshop/tree/main/Seurat/IntroToSeurat/InstallRLibrariesPackage), but the library devtools needs to be installed first.
 
 # Outline
-* scRNA-seq technology
-* scRNA-seq standard analysis
-* Data Accessibility 
-* scRNA-seq analysis software
-* Use of scRNA-seq data in the retina and workflow in other types of data sets
-* New technologies
-* Introduction to R
+* [Overview of scRNA-seq technology and analysis workflow](https://github.com/AlineRngl/IBRO_single-cell_workshop/blob/main/Slides/IBRO2024_scRNA-seq.pdf)
+  - scRNA-seq technology
+  - scRNA-seq standard analysis
+  - Data Accessibility 
+  - scRNA-seq analysis software
+  - Use of scRNA-seq data in the retina and workflow in other types of data sets
+  - New technologies
+* [Introduction to R](https://html-preview.github.io/?url=https://github.com/AlineRngl/IBRO_single-cell_workshop/blob/main/Intro%20to%20R/IntroToR.html)
 * [Introduction to Seurat](https://html-preview.github.io/?url=https://github.com/AlineRngl/IBRO_single-cell_workshop/blob/main/Seurat/IntroToSeurat/RGC_singleCell_Analysis.html)
-* Hands-on exercises
+* [Hands-on exercises](https://github.com/AlineRngl/IBRO_single-cell_workshop/tree/main/Seurat/dataHandsOn)
 
   # References
   _This workshop uses processed RNA-seq counts from this [study](https://www.sciencedirect.com/science/article/pii/S0896627319309699)_.
