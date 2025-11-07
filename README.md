@@ -5,9 +5,9 @@ The goal of this workshop is to help participants learn how to use publicly avai
 Access to Rstudio
 
 # Software
-R: https://www.r-project.org/
+[R](https://www.r-project.org/)
 
-Rstudio: https://posit.co/download/rstudio-desktop/
+[Rstudio](https://posit.co/download/rstudio-desktop/)
 
 In R, install the following libraries (in case they are not already installed):
 * seurat
@@ -29,5 +29,13 @@ You can also install them using the R package here, but the library devtools nee
 * Introduction to R
 * Introduction to Seurat
 * Hands-on exercises
+
+  # References
+  _This workshop uses processed RNA-seq counts from this [study](https://www.sciencedirect.com/science/article/pii/S0896627319309699)_.
+
+  This workshop used material adapted from the following sources:
+  [Seurat](https://satijalab.org/seurat/articles/get_started.html)
+
+
 
 
