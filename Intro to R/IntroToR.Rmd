@@ -1,0 +1,139 @@
+---
+title: "Mini introduction to R"
+output: html_document
+date: "2023-05-25"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is a mini introduction to how to use R. The goal is to learn the general aspects of how R works to use Seurat.
+
+# Running basic commands
+```{r}
+1 + 1 # arithmetic operators
+```
+
+```{r}
+9 > 10 # logical operator for comparisons
+```
+
+# Variables 
+Variables can be assigned using '<-' or '='
+
+## Scalar
+Used to save a single value
+```{r}
+a <- 1 + 0.02 # numeric
+a
+```
+
+## Vectors
+Used to save multiple values of the same type in a 1-D array
+```{r}
+vectorNumbers <- c(1, 2, 4) # Create a numeric vector containing numbers
+vectorNumbers
+```
+
+```{r}
+vectorStrings <- c("neuron", "glia") # Create a vector containing characteres
+vectorStrings
+```
+
+## Matrix
+Used to save multiple values of the same type in a 2-D array
+```{r}
+MatrixNum <- matrix(data = c(1,1,1,2,2,2,3,3,3,4,4,4), nrow = 3, ncol = 4) # Numeric matrix filled by column (3x4)
+MatrixNum
+```
+
+## Data frame
+Used to save multiple values of the same size in a 2-D array
+```{r}
+DataFrame <- data.frame( numbers = c(1,2,3), region = c("cortex", "hippocampus", "spinal cord"),
+              cells = c(1000, 30488, 2084))
+
+DataFrame
+```
+
+## List
+Use to save different types of values of different sizes in a multidimensional array
+```{r}
+ListRandom <- list(DataFrame, MatrixNum, vectorStrings, vectorNumbers, a)
+ListRandom
+```
+
+
+# Functions
+Functions are blocks of code grouped together to handle similar inputs and produce a specific output.
+
+For example, we can calculate the mean of a numeric vector
+```{r}
+mean(c(90,4,5,.3))
+```
+
+or sort it
+```{r}
+sort(c(90,4,5,.3))
+```
+
+get dimensions
+```{r}
+DataFrame
+dim(DataFrame)
+rownames(DataFrame)
+colnames(DataFrame) 
+```
+
+# Access variables
+'[]' lets you access variables using indices
+```{r}
+vectorGenes <- c("Foxp2", "Spp1", "Sdk1", "Satb1", "Calb")
+vectorGenes [3] # get element in the 3rd position
+vectorGenes [1:3] # get elements from 1st to 3rd position
+vectorGenes [c(2,5)] # get element in the 2nd and 5th positions
+```
+
+Accessing matrices
+```{r}
+MatrixNum <- matrix(data = c(1,1,1,2,2,2,3,3,3,4,4,4), nrow = 3, ncol = 4) 
+MatrixNum [, 1] # accessing all rows in the 1st column
+MatrixNum [2, ] # accessing all columns in the 2nd row
+```
+
+Accessing data frame
+```{r}
+DataFrame <- data.frame( numbers = c(1,2,3,4), region = c("cortex", "hippocampus", "spinal cord", "cortex"), cells = c(1000, 30488, 2084, 8888))
+
+DataFrame$region #access elements in column "region"
+DataFrame$region [2] # access 2nd element in the column "region" 
+DataFrame$region == "cortex" # logical indices that meet a condition
+DataFrame [DataFrame$region == "cortex", ] # access rows that a meet condition
+```
+
+# Importing Data
+ To analyze data in Seurat you will need to read gene expression data into R. The easiest way is to use the *read.table* function.   
+ 
+Here, we read a table which contains a header and each element is separated by a ','. 
+```{r, eval=FALSE}
+mydata <- read.table("c:/mydata.csv", header=TRUE, sep=",")
+```
+
+For variable formats, take a look at the *read.table* help. 
+```{r}
+help("read.table")
+```
+
+# libraries
+
+There are some variables type and function that are specific for some Libraries. You can install them in the "packages" section. Once installed, libraries need to be re-load every time you reset R.
+
+```{r}
+library("ggplot2") #load library "ggplot2"
+data(PlantGrowth) # load sample data
+head (PlantGrowth) # take a look at the first element of the data set
+ggplot(data = PlantGrowth, aes(x = group, y = weight)) + geom_boxplot()
+
+```
+
