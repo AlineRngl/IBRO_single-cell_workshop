@@ -1,0 +1,18 @@
+Package: InstallLibraries
+Type: Package
+Title: Libraries IBRO single-cell
+Version: 0.1.0
+Author: Aline Rangel
+Maintainer: The package maintainer <aline.rangelolguin@mail.mcgill.ca>
+Description: This package will let you install all the libraries needed for this IBRO single-cell workshop.
+License: NA
+Encoding: UTF-8
+LazyData: true
+
+Imports:
+    Seurat,
+    ggplot2,
+    data.table,
+    cowplot,
+    scales,
+    dplyr
